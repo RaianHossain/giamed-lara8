@@ -1,0 +1,11 @@
+*
+!.gitignore
+
+!products/
+!products/**
+
+!brands/
+!brands/**
+
+!services/
+!services/**
