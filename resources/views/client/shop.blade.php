@@ -49,6 +49,46 @@
             transition: all 0.3s ease;
         }
 
+        .shop-filter-bar.gmd-fix-filterbar .filter-col .form-control {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .shop-filter-bar.gmd-fix-filterbar .filter-col input.form-control {
+            height: 42px !important;
+            min-height: 42px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            line-height: 42px !important;
+        }
+
+        .shop-filter-bar.gmd-fix-filterbar .filter-col select.form-control {
+            height: 42px !important;
+            min-height: 42px !important;
+        }
+
+        .shop-filter-bar.gmd-fix-filterbar .filter-col .nice-select {
+            float: none;
+            width: 100% !important;
+            display: flex;
+            align-items: center;
+            height: 42px !important;
+            line-height: normal !important;
+            padding: 0 40px 0 12px !important;
+        }
+
+        .shop-filter-bar.gmd-fix-filterbar .filter-col .nice-select .current {
+            flex: 1 1 auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .shop-filter-bar.gmd-fix-filterbar .filter-col .nice-select:after {
+            right: 14px;
+        }
+
         .filter-col input::placeholder,
         .filter-col select {
             color: #666;
@@ -141,6 +181,25 @@
                 font-size: 12px;
             }
 
+            .shop-filter-bar.gmd-fix-filterbar .filter-col input.form-control,
+            .shop-filter-bar.gmd-fix-filterbar .filter-col select.form-control {
+                height: 38px !important;
+                min-height: 38px !important;
+            }
+
+            .shop-filter-bar.gmd-fix-filterbar .filter-col input.form-control {
+                line-height: 38px !important;
+            }
+
+            .shop-filter-bar.gmd-fix-filterbar .filter-col .nice-select {
+                height: 38px !important;
+                padding: 0 36px 0 10px !important;
+            }
+
+            .shop-filter-bar.gmd-fix-filterbar .filter-col .nice-select:after {
+                right: 12px;
+            }
+
             .filter-buttons-col {
                 flex-direction: column;
                 gap: 8px;
@@ -159,7 +218,7 @@
     <section class="shop-banner-area pt-40 pb-120">
         <div class="container">
             <!-- Filter Bar -->
-            <div class="shop-filter-bar mb-30">
+            <div class="shop-filter-bar mb-30 gmd-fix-filterbar">
                 <div class="row px-3 px-md-0">
                     <div class="col-md-8 mx-auto">
                         <div class="row">

@@ -51,21 +51,13 @@
                   Remember Me
                 </label>
               </div>
-              <a href="{{url('auth/forgot-password-basic')}}" class="float-end mb-1">
-                <span>Forgot Password?</span>
-              </a>
+              <span></span>
             </div>
             <div class="mb-5">
               <button class="btn btn-primary d-grid w-100" type="submit">login</button>
             </div>
           </form>
 
-          <p class="text-center mb-5">
-            <span>New on our platform?</span>
-            <a href="{{url('auth/register-basic')}}">
-              <span>Create an account</span>
-            </a>
-          </p>
         </div>
       </div>
       <!-- /Login -->

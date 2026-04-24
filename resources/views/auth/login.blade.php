@@ -52,21 +52,9 @@
         </div>
 
         <div class="d-flex align-items-center justify-content-between">
-            @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}">Forgot your password?</a>
-            @else
-                <span></span>
-            @endif
-
+            <span></span>
             <button type="submit" class="btn btn-primary">Log in</button>
         </div>
 
-        <hr class="my-4">
-
-        @if (Route::has('register'))
-            <div class="text-center">
-                <a href="{{ route('register') }}">Create an account</a>
-            </div>
-        @endif
     </form>
 </x-guest-layout>
