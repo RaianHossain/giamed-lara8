@@ -119,7 +119,6 @@ class ProductController extends Controller
 
             return redirect()->route('dashboard-products')->with('success', 'Product created successfully.');
         } catch (\Exception $e) {
-            dd($e->getMessage());
             return redirect()->back()->with('error', 'An error occurred while creating the product: ' . $e->getMessage());
         }
     }

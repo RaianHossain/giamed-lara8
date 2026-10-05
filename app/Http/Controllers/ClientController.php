@@ -19,7 +19,7 @@ class ClientController extends Controller
     }
 
     public function serviceDetails($slug) {
-        $service = Service::where('slug', $slug)->first();
+        $service = Service::where('slug', $slug)->firstOrFail();
         $otherServices = Service::where('id', '!=', $service->id)->take(5)->get();
         return view('client.service-details', compact('service', 'otherServices'));
     }
@@ -32,7 +32,7 @@ class ClientController extends Controller
             'message' => 'required',
         ]);
         $request->all();
-        return redirect()->route('client.home')->with('success', 'Your message has been sent successfully!');
+        return redirect()->route('home')->with('success', 'Your message has been sent successfully!');
     }
 
     public function allServices() {

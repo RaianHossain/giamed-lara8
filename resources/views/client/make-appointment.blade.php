@@ -75,7 +75,6 @@
                                 const alertBox = document.getElementById('success-message');
 
                                 form.addEventListener('submit', function (e) {
-                                    alert("pressed");
                                     e.preventDefault();
 
                                     const formData = new FormData(form);
@@ -96,6 +95,8 @@
                                             setTimeout(() => {
                                                 alertBox.style.display = 'none';
                                             }, 4000);
+                                        } else {
+                                            alert(Object.values(data.errors || {}).flat()[0] || data.message || 'Please check the form and try again.');
                                         }
                                     })
                                     .catch(error => {

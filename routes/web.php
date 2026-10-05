@@ -142,7 +142,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/appointments/edit/{id}', [AppointmentController::class, 'edit'])->name('dashboard-appointments-edit');
     Route::get('/dashboard/appointments/create', [AppointmentController::class, 'create'])->name('dashboard-appointments-create');
     Route::post('/dashboard/appointments', [AppointmentController::class, 'store'])->name('dashboard-appointments-store');
-    Route::post('/api/appointments', [AppointmentController::class, 'store_api'])->name('dashboard-appointments-store-api');
     // Route::put('/dashboard/appointments/{appointment}', [AppointmentController::class, 'update'])->name('dashboard-appointments-update');
     Route::delete('/dashboard/appointments/{id}', [AppointmentController::class, 'destroy'])->name('dashboard-appointments-destroy');
     Route::post('/dashboard/appointments/status', [AppointmentController::class, 'updateStatus'])->name('dashboard-appointments-update-status');
@@ -220,7 +219,7 @@ Route::get('/api/part', [ClientController::class, 'part_api'])->name('api.part')
 
 Route::get('/make-appointment', [ClientController::class, 'makeAppointmentPage'])->name('make-appointment');
 
-Route::post('/make-appointment', [ClientController::class, 'makeAppointmentStore'])->name('make-appointment.store');
+Route::post('/api/appointments', [AppointmentController::class, 'store_api'])->middleware('throttle:10,1')->name('dashboard-appointments-store-api');
 // Product details route
 Route::get('/products/{id}/details', [ClientController::class, 'productDetails'])->name('product.details');
 
